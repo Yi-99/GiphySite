@@ -1,0 +1,16 @@
+body {
+    background-color: gray;
+}
+
+.btn {
+    color: white;
+}
+
+.navbar {
+    justify-content: center;
+    text-align: center;
+}
+
+.gif-container {
+    margin-top: 20px;
+}
