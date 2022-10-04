@@ -17,14 +17,21 @@ function init() {
             let fig = document.createElement('figure');
             let img = document.createElement('img');
             let fc = document.createElement('figcaption');
-            img.src = content.data[0].images.downsized.url;
-            img.alt = content.data[0].title;
-            fc.textContent = content.data[0].title;
-            fig.appendChild(img);
-            //fig.appendChild(fc);
             let container = document.querySelector('.gif-container');
-            container.insertAdjacentElement("afterbegin", fig);
-            document.querySelector('.gif-container').value() = '';
+
+            // loop through the array with 25 images and put them all in the gif-container
+            for (let i=0; i < content.data.length; i++) {
+                fig.src = "";
+                console.log(i);
+                img.src = content.data[i].images.downsized.url;
+                img.alt = content.data[i].title;
+                fc.textContent = content.data[i].title;
+                container.appendChild(img);
+                //fig.appendChild(img);
+
+                //container.insertAdjacentElement("beforeend", fig);
+                document.getElementById("search").value = "";
+            }
         })
         .catch(err => {
             console.error(err);

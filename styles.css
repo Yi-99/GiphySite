@@ -13,4 +13,21 @@ body {
 
 .gif-container {
     margin-top: 20px;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.footer-text {
+    color: white;
+    text-align: center;
 }
