@@ -11,6 +11,11 @@ body {
     text-align: center;
 }
 
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
 .gif-container {
     margin-top: 20px;
     display: flex;
@@ -30,4 +35,9 @@ body {
 .footer-text {
     color: white;
     text-align: center;
+}
+
+.btnClear {
+    margin: 5px;
+    color: black;
 }

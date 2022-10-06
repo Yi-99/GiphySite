@@ -15,17 +15,18 @@ function init() {
             console.log(content.data);
             console.log('META', content.meta);
             let fig = document.createElement('figure');
-            let img = document.createElement('img');
             let fc = document.createElement('figcaption');
             let container = document.querySelector('.gif-container');
 
             // loop through the array with 25 images and put them all in the gif-container
             for (let i=0; i < content.data.length; i++) {
+                let img = document.createElement('img');
                 fig.src = "";
                 console.log(i);
                 img.src = content.data[i].images.downsized.url;
                 img.alt = content.data[i].title;
                 fc.textContent = content.data[i].title;
+                img.style.margin = '5px';
                 container.appendChild(img);
                 //fig.appendChild(img);
 
@@ -38,3 +39,11 @@ function init() {
         })
     });
 }
+
+document.getElementById("btnClear").addEventListener("click", ev => {
+    ev.preventDefault();
+    let button = document.getElementById("btnClear");
+    let container = document.querySelector('.gif-container');
+
+    container.textContent = '';
+});
